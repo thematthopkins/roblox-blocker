@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+echo granting access for $1 minutes
+
+./unblock-roblox
+
+for i in $(seq $1 -1 0)
+do
+        echo $i minutes remaining
+        sleep 60
+done
+
+echo "removing access"
+
+./block-roblox

@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+BLOCK_ROBLOX=true npx playwright test
