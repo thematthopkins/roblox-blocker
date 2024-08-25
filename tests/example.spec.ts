@@ -20,5 +20,9 @@ test('has title', async ({ page }) => {
   if(checked == "true" && BLOCK_ROBLOX != "true"){
       await page.getByLabel('Enable rule switch').locator('span').first().click();
   }
+  function timeout(ms:number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  await timeout(3000);
 });
 
